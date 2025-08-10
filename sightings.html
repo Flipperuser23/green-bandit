@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Green Bandit Fan Club — Sightings</title>
+<link rel="stylesheet" href="assets/site.css"/></head>
+<body>
+<header><div class="container"><nav>
+  <div class="brand">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+      <path d="M7 9l5 7 5-10" stroke="var(--accent)" stroke-width="2" fill="none" />
+    </svg> Green Bandit Fan Club
+  </div>
+  <div>
+    <a class="link" href="index.html">Home</a>
+    <a class="link active" href="sightings.html">Sightings</a>
+    <a class="link" href="lore.html">Lore</a>
+    <a class="link" href="build.html">2K Build</a>
+    <a class="link" href="chat.html">Live Chat</a>
+    <button class="btn secondary" id="themeBtn">Toggle Theme</button>
+    <button class="btn secondary" id="musicBtn">Play Theme</button>
+  </div>
+</nav></div></header>
+<main class="container">
+  <audio id="bgm" src="assets/green-bandit-theme.wav" loop></audio>
+
+  <section class="grid g2">
+    <div class="card">
+      <h2>Report a Sighting</h2>
+      <form id="sightingForm" autocomplete="off">
+        <label for="where">Where did you spot the Bandit?</label>
+        <input id="where" type="text" placeholder="e.g., Level 405 service aisle / The Park / South stairwell">
+        <label for="details">What happened?</label>
+        <textarea id="details" placeholder="Brief description (PG only)"></textarea>
+        <label for="vibe">Lighting / Vibe</label>
+        <select id="vibe">
+          <option>Green fluorescent</option>
+          <option>Flicker yellow</option>
+          <option>Emergency red</option>
+          <option>Natural light</option>
+        </select>
+        <div style="display:flex; gap:10px; margin-top:10px">
+          <button class="btn" type="submit">Submit</button>
+          <button class="btn secondary" type="button" id="clearBtn">Clear All</button>
+        </div>
+        <div class="tiny" id="saveMsg" aria-live="polite" style="margin-top:8px"></div>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Community Sightings</h2>
+      <div class="list" id="sightingsList" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:12px">
+    <h3>Upload Images / Video</h3>
+    <div class="uploader">
+      <input id="media" type="file" accept="image/*,video/*" multiple />
+      <div class="preview" id="preview"></div>
+      <div style="display:flex; gap:10px">
+        <button class="btn" id="uploadBtn" type="button">Upload to Server</button>
+        <div class="tiny" id="uploadMsg"></div>
+      </div>
+      <div class="tiny">Uploads are public on this site at <code>/uploads</code>. Keep it PG.</div>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Green Bandit Fan Club — PG fan content.</footer>
+</main>
+<script src="assets/site.js"></script>
+</body></html>
