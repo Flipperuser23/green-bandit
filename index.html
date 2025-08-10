@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Bandit Fan Club — Home</title>
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M7 9l5 7 5-10" stroke="var(--accent)" stroke-width="2" fill="none" />
+        </svg>
+        Green Bandit Fan Club
+      </div>
+      <div>
+        <a class="link active" href="index.html">Home</a>
+        <a class="link" href="sightings.html">Sightings</a>
+        <a class="link" href="lore.html">Lore</a>
+        <a class="link" href="build.html">2K Build</a>
+        <a class="link" href="chat.html">Live Chat</a>
+        <button class="btn secondary" id="themeBtn" title="Toggle theme">Toggle Theme</button>
+        <button class="btn secondary" id="musicBtn" title="Play/Mute theme">Play Theme</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Background music (optional; add assets/green-bandit-theme.wav whenever) -->
+  <audio id="bgm" src="assets/green-bandit-theme.wav" loop></audio>
+
+  <section class="grid g2">
+    <div>
+      <span class="badge">Official · Since 2025</span>
+      <h1>We don’t just watch the Bandit — we follow the squeaks.</h1>
+      <p class="sub">Welcome to the hub for lore, sightings, memes, and stat-head breakdowns of the Green Bandit.
+        Everything here is PG — the “mysterious green artifact” is canonically censored. 🤫</p>
+      <div style="display:flex; gap:12px; margin-top:10px">
+        <a class="btn" href="sightings.html">Report a Sighting</a>
+        <a class="btn secondary" href="chat.html">Join Live Chat</a>
+      </div>
+    </div>
+    <div class="card cctv" aria-label="Simulated CCTV still of the Green Bandit">
+      <div class="scanline" aria-hidden="true"></div>
+      <div class="corner tl">CAM 03 — SERVICE HALL</div>
+      <div class="corner tr" id="timeStamp"></div>
+      <div class="corner bl">REC ●</div>
+      <div class="corner br">ISO 800</div>
+      <div class="silhouette">
+        <div class="bandit">
+          <div class="poncho" aria-hidden="true"></div>
+          <div class="artifact" aria-hidden="true" title="Mysterious green artifact"></div>
+          <div class="censor" aria-label="Censored area"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid g3" style="margin-top:8px">
+    <div class="card"><h3>Mission</h3><p class="sub">Document sightings (Backrooms, 2K Park), share builds, keep it spooky but safe.</p></div>
+    <div class="card"><h3>Perks</h3><p class="sub">Sightings digest, “Caught Slippin’” badge, 2K26 build presets.</p></div>
+    <div class="card"><h3>Events</h3><p class="sub">Bandit Watch Night, Store Credit Run, Lore Debate.</p></div>
+  </section>
+
+  <footer>© <span id="year"></span> Green Bandit Fan Club — PG fan content.</footer>
+</main>
+<script src="assets/site.js"></script>
+</body>
+</html>
