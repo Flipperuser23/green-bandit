@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Green Bandit Fan Club — Lore</title>
+  <link rel="stylesheet" href="assets/site.css"/>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M7 9l5 7 5-10" stroke="var(--accent)" stroke-width="2" fill="none"/>
+        </svg>
+        Green Bandit Fan Club
+      </div>
+      <div>
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="sightings.html">Sightings</a>
+        <a class="link active" href="lore.html">Lore</a>
+        <a class="link" href="build.html">2K Build</a>
+        <a class="link" href="chat.html">Live Chat</a>
+        <button class="btn secondary" id="themeBtn">Toggle Theme</button>
+        <button class="btn secondary" id="musicBtn">Play Theme</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <audio id="bgm" src="assets/green-bandit-theme.wav" loop></audio>
+
+  <section class="grid g2">
+    <div class="card">
+      <h2>Lore Timeline</h2>
+      <div class="list">
+        <div class="item">
+          <strong>Level 405: “The Return Window”</strong>
+          <div class="tiny">First CCTV frame; timestamp drifted +04:16 from local time.</div>
+        </div>
+        <div class="item">
+          <strong>Cashier Ink Stamps</strong>
+          <div class="tiny">Bandit slips “Ink of Record” memory locks within ~24 minutes.</div>
+        </div>
+        <div class="item">
+          <strong>Park Takeover</strong>
+          <div class="tiny">Full green fits, triple lane steals, one reverse dunk. Street cam footage lost.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Rules (PG)</h2>
+      <ul class="sub">
+        <li>No explicit imagery or sexual content.</li>
+        <li>Be cool to people—no harassment or doxxing.</li>
+        <li>Tag spoilers for deep-dive lore threads.</li>
+      </ul>
+      <div class="sep"></div>
+      <p class="tiny">This fan canon is for fun and creativity. Keep it weird, keep it safe.</p>
+    </div>
+  </section>
+
+  <section class="grid g2">
+    <div class="card">
+      <h2>Artifacts & Mechanics</h2>
+      <div class="list">
+        <div class="item"><strong>Green Artifact</strong><div class="tiny">Always censored on footage. Emits faint green bloom.</div></div>
+        <div class="item"><strong>Receipt Rope</strong><div class="tiny">Braided receipt strips + stapler → 10 m rope (flammable).</div></div>
+        <div class="item"><strong>Ink Seal</strong><div class="tiny">Steal a Cashier stamp to “lock” a memory for ~24 minutes.</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Sightings Tips</h2>
+      <ul class="sub">
+        <li>Don’t sprint with Debt > 0 (it draws “Loss Prevention”).</li>
+        <li>Prefer dim green light; avoid pure darkness.</li>
+        <li>Keep backups of essentials in inner pockets.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Green Bandit Fan Club — PG fan content.</footer>
+</main>
+<script src="assets/site.js"></script>
+</body>
+</html>
