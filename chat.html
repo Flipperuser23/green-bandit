@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Green Bandit Fan Club — Live Chat</title>
+  <link rel="stylesheet" href="assets/site.css"/>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M7 9l5 7 5-10" stroke="var(--accent)" stroke-width="2" fill="none"/>
+        </svg>
+        Green Bandit Fan Club
+      </div>
+      <div>
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="sightings.html">Sightings</a>
+        <a class="link" href="lore.html">Lore</a>
+        <a class="link" href="build.html">2K Build</a>
+        <a class="link active" href="chat.html">Live Chat</a>
+        <button class="btn secondary" id="themeBtn">Toggle Theme</button>
+        <button class="btn secondary" id="musicBtn">Play Theme</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <audio id="bgm" src="assets/green-bandit-theme.wav" loop></audio>
+
+  <section class="grid g2">
+    <div class="card">
+      <h2>Live Chat</h2>
+      <div class="tiny" id="chatStatus">Connecting…</div>
+      <div class="chat">
+        <div class="chatlog" aria-live="polite"></div>
+        <form id="chatForm" autocomplete="off" style="display:flex; gap:8px">
+          <input id="chatName" type="text" placeholder="Your name" style="max-width:180px">
+          <input id="chatMsg" type="text" placeholder="Say something…" style="flex:1">
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <div class="tiny">If the server isn’t running, chat falls back to local BroadcastChannel (tab-to-tab).</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>How it works</h2>
+      <ol class="sub">
+        <li>Front-end connects to <code>wss://&lt;your-domain&gt;/ws</code>.</li>
+        <li>Messages broadcast to all connected clients.</li>
+        <li>Run the Node server (Render deploy) to enable real multi-user chat + uploads.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Green Bandit Fan Club — PG fan content.</footer>
+</main>
+<script src="assets/site.js"></script>
+</body>
+</html>
